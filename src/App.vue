@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Yassin Eldeep's <span>Very Hard</span> Challenge</h1>
+    <div>
+      <button @click="num++">+</button>
+      <p>{{ num }}</p>
+      <button @click="num > 0 ? num-- : num">-</button>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      num: 0
+    }
   }
 }
 </script>
@@ -25,4 +29,33 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+h1 span {
+  color: red;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+p {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+button {
+  background-color: #2c3e50;
+  color: #FFF;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  width: 50px;
+  height: 40px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+button:hover {
+  background-color: dimgrey;
+}
+
 </style>
