@@ -32,7 +32,7 @@ export default {
       this.num+=amount
     },
     decrement(amount) {
-      this.num > 0 ? this.num-=amount : this.num
+      this.num > 0 && this.num - amount > 0? this.num-=amount : this.num
     }
   }
 }
